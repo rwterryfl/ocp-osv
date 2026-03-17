@@ -1,6 +1,7 @@
 resources:
 - ../../base
 
+# OSV Operator
 patches:
 - target:
     kind: Subscription
@@ -12,6 +13,23 @@ patches:
 
 - target:
     kind: Namespace
+  patch: |
+    - op: add
+      path: /metadata/labels/ci_environment
+      value: prod
+
+# Node Health Check Operator
+- target:
+    kind: Subscription
+    name: node-health-check-operator
+  patch: |
+    - op: replace
+      path: /spec/channel
+      value: stable
+
+- target:
+    kind: Namespace
+    name: node-health-check
   patch: |
     - op: add
       path: /metadata/labels/ci_environment

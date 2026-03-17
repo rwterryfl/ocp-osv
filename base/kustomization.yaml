@@ -5,3 +5,7 @@ resources:
 - namespace.yaml
 - operatorgroup.yaml
 - subscription.yaml
+# Node Health Check Operator
+- namespace-nho.yaml
+- operatorgroup-nho.yaml
+- subscription-nho.yaml
