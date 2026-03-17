@@ -26,11 +26,3 @@ patches:
     - op: replace
       path: /spec/channel
       value: stable
-
-- target:
-    kind: Namespace
-    name: node-health-check
-  patch: |
-    - op: add
-      path: /metadata/labels/ci_environment
-      value: nonprod
