@@ -4,7 +4,7 @@ metadata:
   name: ocp-osv
 policyDefaults:
   namespace: acm-config
-  remediationAction: enforce
+  remediationAction: inform
   complianceType: musthave
   severity: low
   placement:
