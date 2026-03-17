@@ -4,9 +4,7 @@ metadata:
     name: node-health-check-operator
     namespace: node-health-check 
 spec:
-    channel: stable 
-    installPlanApproval: Manual 
-    name: node-healthcheck-operator
     source: redhat-operators
     sourceNamespace: openshift-marketplace
-    package: node-healthcheck-operator
+    name: node-healthcheck-operator
+    channel: REPLACED_BY_KUSTOMIZE
