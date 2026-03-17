@@ -1,0 +1,18 @@
+resources:
+- ../../base
+
+patches:
+- target:
+    kind: Subscription
+    name: hco-operatorhub
+  patch: |
+    - op: replace
+      path: /spec/channel
+      value: stable
+
+- target:
+    kind: Namespace
+  patch: |
+    - op: add
+      path: /metadata/labels/ci_environment
+      value: lab

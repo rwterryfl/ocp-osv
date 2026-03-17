@@ -1,0 +1,26 @@
+apiVersion: policy.open-cluster-management.io/v1
+kind: PolicyGenerator
+metadata:
+  name: ocp-osv
+policyDefaults:
+  namespace: acm-config
+  remediationAction: enforce
+  complianceType: musthave
+  severity: low
+  placement:
+    placementPath: placement.yaml
+  controls:
+  - "Operator"
+  categories:
+  - "ocp osv"
+  standards:
+  - "ocp-standard"
+  consolidateManifests: true
+  evaluationInterval:
+    compliant: 10m
+    noncompliant: 30s
+policies:
+- name: ocp-osv-prod-policy
+  manifests:
+    - path: ./manifests
+
