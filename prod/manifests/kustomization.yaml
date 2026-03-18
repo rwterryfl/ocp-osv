@@ -1,7 +1,7 @@
 resources:
 - ../../base
 
-# OSV Operator
+# Openshift Virtualization Operator
 patches:
 - target:
     kind: Subscription
@@ -22,6 +22,15 @@ patches:
 - target:
     kind: Subscription
     name: node-health-check-operator
+  patch: |
+    - op: replace
+      path: /spec/channel
+      value: stable
+
+# Kube Descheduler Operator
+- target:
+    kind: Subscription
+    name: cluster-kube-descheduler-operator
   patch: |
     - op: replace
       path: /spec/channel
