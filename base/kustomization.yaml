@@ -10,7 +10,12 @@ resources:
 - namespace-nho.yaml
 - operatorgroup-nho.yaml
 - subscription-nho.yaml
+# Fence Agents Remediation Operator
+- namespace-far.yaml
+- operatorgroup-far.yaml
+- subscription-far.yaml
 # Kube Descheduler Operator
 - namespace-ds.yaml
 - operatorgroup-ds.yaml
 - subscription-ds.yaml
+

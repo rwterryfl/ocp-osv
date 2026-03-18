@@ -27,6 +27,15 @@ patches:
       path: /spec/channel
       value: stable
 
+# Fence Agents Remediation Operator
+- target:
+    kind: Subscription
+    name: fence-agents-remediation
+  patch: |
+    - op: replace
+      path: /spec/channel
+      value: stable
+
 # Kube Descheduler Operator
 - target:
     kind: Subscription
